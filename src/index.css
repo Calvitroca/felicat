@@ -1,0 +1,52 @@
+/* 1. Google Fonts como respaldo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Nunito:wght@400;700;800;900&display=swap');
+
+/* 2. Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Fuente Cobbler Sans (archivo en public/fonts) */
+@font-face {
+  font-family: "Cobbler Sans";
+  src: url("/fonts/CobblerSansTest-Black-BF67590d215acda.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* 4. Utilidades de fuente */
+.font-primary {
+  font-family: "Cobbler Sans", "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-secondary {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 5. Estilos base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f9fafb; /* bg-gray-50 */
+  color: #1f2933;      /* text-gray-800 aprox */
+}
+
+/* 6. Animación lenta de bounce */
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
